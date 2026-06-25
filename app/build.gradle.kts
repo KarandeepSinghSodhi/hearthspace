@@ -11,10 +11,10 @@ plugins {
 
 android {
     compileSdk = 35
-    namespace = "com.lovewidget"
+    namespace = "com.widget.shared"
 
     defaultConfig {
-        applicationId = "com.lovewidget.shared"
+        applicationId = "com.widget.shared"
         minSdk = 21
         targetSdk = 35
         versionCode = 1
@@ -27,7 +27,7 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
         debug {
-            applicationIdSuffix = ".debug"
+            // no suffix — keeps same package as Firebase registration
         }
     }
 

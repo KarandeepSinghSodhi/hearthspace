@@ -1,14 +1,19 @@
-// res/values/strings.xml
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Shared Love Widget</string>
+    <string name="app_name">Hearthspace</string>
     <string name="sign_in_prompt">Sign in with Google to start sharing</string>
     <string name="sign_in_button">Sign in with Google</string>
     <string name="pairing_title">Create or Join a Pair</string>
     <string name="pair_id_label">Pair ID</string>
     <string name="copy_pair_id">Copy Pair ID</string>
     <string name="share_pair_qr">Share QR Code</string>
-    <string name="edit_note_hint">Write a note...</string>
+    <string name="edit_note_hint">Write a note…</string>
     <string name="save_button">Save</string>
     <string name="logout">Logout</string>
-    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+    <!--
+        TODO: Add your Web OAuth client ID here AFTER you set up Google Sign-In.
+        Steps: Firebase Console → Authentication → Sign-in method → Google →
+               copy the "Web client ID" from the OAuth client list.
+    -->
+    <string name="default_web_client_id">PASTE_WEB_CLIENT_ID_HERE</string>
 </resources>
