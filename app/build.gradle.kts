@@ -4,7 +4,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("androidx.room")
+    id("org.jetbrains.kotlin.plugin.compose")
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
 }
@@ -41,9 +41,6 @@ android {
 
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.14"
     }
 }
 
