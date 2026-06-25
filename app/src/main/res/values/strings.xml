@@ -10,10 +10,5 @@
     <string name="edit_note_hint">Write a note…</string>
     <string name="save_button">Save</string>
     <string name="logout">Logout</string>
-    <!--
-        TODO: Add your Web OAuth client ID here AFTER you set up Google Sign-In.
-        Steps: Firebase Console → Authentication → Sign-in method → Google →
-               copy the "Web client ID" from the OAuth client list.
-    -->
-    <string name="default_web_client_id">PASTE_WEB_CLIENT_ID_HERE</string>
+    <string name="default_web_client_id">557931911317-d0bclq174ca4b6ls9ca62uilq2knhokk.apps.googleusercontent.com</string>
 </resources>
