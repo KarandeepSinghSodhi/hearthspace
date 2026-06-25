@@ -1,0 +1,19 @@
+<resources>
+    <style name="Theme.SharedLove" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#E91E8C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#FFD6EA</item>
+        <item name="colorSecondary">#F48FB1</item>
+        <item name="colorBackground">#FFF8FB</item>
+        <item name="colorSurface">#FFF8FB</item>
+    </style>
+
+    <style name="Theme.SharedLove.Transparent" parent="Theme.SharedLove">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

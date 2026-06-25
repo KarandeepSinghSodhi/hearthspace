@@ -1,0 +1,21 @@
+# .gitignore for Android project
+# Local properties (NEVER commit - contains SDK path)
+local.properties
+# Google Services (NEVER commit - contains Firebase secrets)
+app/google-services.json
+# Keystore (NEVER commit)
+*.keystore
+*.jks
+# Build outputs
+/build
+app/build
+# Gradle caches
+.gradle
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+# OS files
+.DS_Store
+Thumbs.db

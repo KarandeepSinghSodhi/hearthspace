@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Pairings ────────────────────────────────────────────────────────────
+    match /pairings/{pairId} {
+      allow read, write: if request.auth != null &&
+        (resource.data.userA == request.auth.uid ||
+         resource.data.userB == request.auth.uid ||
+         request.resource.data.userA == request.auth.uid);
+    }
+
+    // ── Shared content (one document per pair) ───────────────────────────
+    match /shared/{pairId} {
+      allow read, write: if request.auth != null && userIsInPair(pairId);
+    }
+
+    // ── History (append-only, read-only for users) ───────────────────────
+    match /history/{pairId}/records/{recordId} {
+      allow read: if request.auth != null && userIsInPair(pairId);
+      allow create: if request.auth != null && userIsInPair(pairId);
+      allow update, delete: if false; // immutable history
+    }
+
+    // ── Helper function ──────────────────────────────────────────────────
+    function userIsInPair(pairId) {
+      let pairing = get(/databases/$(database)/documents/pairings/$(pairId)).data;
+      return pairing.userA == request.auth.uid || pairing.userB == request.auth.uid;
+    }
+  }
+}
