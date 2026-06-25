@@ -4,7 +4,7 @@
         <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorPrimaryContainer">#FFD6EA</item>
         <item name="colorSecondary">#F48FB1</item>
-        <item name="colorBackground">#FFF8FB</item>
+        <item name="android:colorBackground">#FFF8FB</item>
         <item name="colorSurface">#FFF8FB</item>
     </style>
 
